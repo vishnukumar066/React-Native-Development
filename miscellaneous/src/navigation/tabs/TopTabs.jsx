@@ -6,7 +6,7 @@ import Tab2Screen from '../../screens/topTab/Tab2Screen';
 import Tab3Screen from '../../screens/topTab/Tab3Screen';
 import Tab4Screen from '../../screens/topTab/Tab4Screen';
 import Tab5Screen from '../../screens/topTab/Tab5Screen';
-import { Home } from 'lucide-react-native';
+import NetInfoTabScreen from '../../screens/topTab/NetInfoTabScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -86,17 +86,9 @@ const TopTabs = () => {
 
       <Tab.Screen
         name="Tab6"
-        component={Tab4Screen}
+        component={NetInfoTabScreen}
         options={{
-          title: 'Offers',
-        }}
-      />
-
-      <Tab.Screen
-        name="Tab7"
-        component={Tab5Screen}
-        options={{
-          title: 'Detailsnb nbmbnmbmnbm',
+          title: 'NetInfo',
         }}
       />
     </Tab.Navigator>
