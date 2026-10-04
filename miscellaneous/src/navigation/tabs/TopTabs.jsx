@@ -7,6 +7,7 @@ import Tab3Screen from '../../screens/topTab/Tab3Screen';
 import Tab4Screen from '../../screens/topTab/Tab4Screen';
 import Tab5Screen from '../../screens/topTab/Tab5Screen';
 import NetInfoTabScreen from '../../screens/topTab/NetInfoTabScreen';
+import WebViewTabScreen from '../../screens/topTab/WebViewTabScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -15,10 +16,12 @@ const TopTabs = () => {
     <Tab.Navigator
       tabBar={props => <CustomTopTabBar {...props} />}
       initialRouteName="Tab1"
+      nestedScrollEnabled={true}
       screenOptions={{
         sceneStyle: {
           backgroundColor: '#fecaca',
         },
+        nestedScrollEnabled: true,
 
         //     tabBarScrollEnabled: true,
         //     tabBarStyle: {
@@ -89,6 +92,14 @@ const TopTabs = () => {
         component={NetInfoTabScreen}
         options={{
           title: 'NetInfo',
+        }}
+      />
+
+      <Tab.Screen
+        name="Tab7"
+        component={WebViewTabScreen}
+        options={{
+          title: 'WebView',
         }}
       />
     </Tab.Navigator>
